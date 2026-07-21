@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Премиум Каталог</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="catalog-header">
+        <span class="catalog-subtitle">Коллекция 2026</span>
+        <h1 class="catalog-title">Предметы пространства</h1>
+        <p class="catalog-desc">
+          Лаконичные формы, натуральные текстуры и безупречная эргономика для
+          вашего интерьера.
+        </p>
+      </header>
+
+      <!-- Панель фильтров и сортировки -->
+      <div class="catalog-bar">
+        <nav class="filter-tabs" aria-label="Категории товаров">
+          <button class="filter-tab active" data-category="all">
+            Все предметы
+          </button>
+          <button class="filter-tab" data-category="ceramics">Керамика</button>
+          <button class="filter-tab" data-category="scents">Ароматы</button>
+          <button class="filter-tab" data-category="lighting">Освещение</button>
+          <button class="filter-tab" data-category="wood">Дерево</button>
+          <button class="filter-tab" data-category="textiles">Текстиль</button>
+        </nav>
+
+        <div class="catalog-meta">
+          <span id="items-count">Показано 6 из 18</span>
+          <!-- Custom Dropdown Component -->
+          <div class="custom-select" id="custom-sort">
+            <button
+              class="custom-select__trigger"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select__value">По популярности</span>
+              <svg
+                class="custom-select__arrow"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="custom-select__options" role="listbox">
+              <li
+                class="custom-select__option selected"
+                role="option"
+                data-value="popular"
+              >
+                По популярности
+              </li>
+              <li class="custom-select__option" role="option" data-value="new">
+                Сначала новые
+              </li>
+              <li
+                class="custom-select__option"
+                role="option"
+                data-value="cheap"
+              >
+                Сначала дешевле
+              </li>
+              <li
+                class="custom-select__option"
+                role="option"
+                data-value="expensive"
+              >
+                Сначала дороже
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Сетка товаров -->
+      <div class="products-grid" id="products-grid">
+        <!-- Карточка 1 -->
+        <article class="product-card" data-category="ceramics">
+          <div class="product-card__media">
+            <span class="product-card__badge">New</span>
+            <button
+              class="product-card__wishlist"
+              onclick="toggleWishlist(this, 'Ваза «Solitude»')"
+              aria-label="Добавить в избранное"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </button>
+            <img
+              class="product-card__img"
+              src="./image/1.webp"
+              alt="Ваза из белой глины"
+              loading="lazy"
+            />
+            <button
+              class="product-card__btn-add"
+              onclick="addToCart('Ваза «Solitude»')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              В корзину
+            </button>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__top-meta">
+              <span class="product-card__category">Керамика</span>
+              <div class="product-card__swatches">
+                <span class="swatch" style="background-color: #f4f1ea"></span>
+                <span class="swatch" style="background-color: #d1c7b7"></span>
+              </div>
+            </div>
+            <h2 class="product-card__title">Ваза «Solitude»</h2>
+            <div class="product-card__footer">
+              <span class="product-card__price">8 500 ₽</span>
+              <div class="product-card__rating">
+                <svg
+                  class="star-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+                <span>4.9</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 2 -->
+        <article class="product-card" data-category="scents">
+          <div class="product-card__media">
+            <button
+              class="product-card__wishlist"
+              onclick="toggleWishlist(this, 'Свеча «Sandalwood & Cedar»')"
+              aria-label="Добавить в избранное"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </button>
+            <img
+              class="product-card__img"
+              src="./image/2.webp"
+              alt="Ароматическая свеча"
+              loading="lazy"
+            />
+            <button
+              class="product-card__btn-add"
+              onclick="addToCart('Свеча «Sandalwood & Cedar»')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              В корзину
+            </button>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__top-meta">
+              <span class="product-card__category">Ароматы</span>
+              <div class="product-card__swatches">
+                <span class="swatch" style="background-color: #3e2723"></span>
+              </div>
+            </div>
+            <h2 class="product-card__title">Свеча «Sandalwood & Cedar»</h2>
+            <div class="product-card__footer">
+              <span class="product-card__price">3 200 ₽</span>
+              <div class="product-card__rating">
+                <svg
+                  class="star-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+                <span>5.0</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 3 -->
+        <article class="product-card" data-category="lighting">
+          <div class="product-card__media">
+            <span class="product-card__badge product-card__badge--dark"
+              >Bestseller</span
+            >
+            <button
+              class="product-card__wishlist"
+              onclick="toggleWishlist(this, 'Светильник «Eclipse»')"
+              aria-label="Добавить в избранное"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </button>
+            <img
+              class="product-card__img"
+              src="./image/3.webp"
+              alt="Настенный светильник"
+              loading="lazy"
+            />
+            <button
+              class="product-card__btn-add"
+              onclick="addToCart('Светильник «Eclipse»')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              В корзину
+            </button>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__top-meta">
+              <span class="product-card__category">Освещение</span>
+              <div class="product-card__swatches">
+                <span class="swatch" style="background-color: #27272a"></span>
+                <span class="swatch" style="background-color: #d4af37"></span>
+              </div>
+            </div>
+            <h2 class="product-card__title">Светильник «Eclipse»</h2>
+            <div class="product-card__footer">
+              <span class="product-card__price">14 900 ₽</span>
+              <div class="product-card__rating">
+                <svg
+                  class="star-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+                <span>4.8</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 4 -->
+        <article class="product-card" data-category="wood">
+          <div class="product-card__media">
+            <button
+              class="product-card__wishlist"
+              onclick="toggleWishlist(this, 'Поднос из дуба «Grain»')"
+              aria-label="Добавить в избранное"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </button>
+            <img
+              class="product-card__img"
+              src="./image/4.webp"
+              alt="Деревянный поднос"
+              loading="lazy"
+            />
+            <button
+              class="product-card__btn-add"
+              onclick="addToCart('Поднос из дуба «Grain»')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              В корзину
+            </button>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__top-meta">
+              <span class="product-card__category">Дерево</span>
+              <div class="product-card__swatches">
+                <span class="swatch" style="background-color: #8d5b4c"></span>
+                <span class="swatch" style="background-color: #3b2319"></span>
+              </div>
+            </div>
+            <h2 class="product-card__title">Поднос из дуба «Grain»</h2>
+            <div class="product-card__footer">
+              <span class="product-card__price">5 400 ₽</span>
+              <div class="product-card__rating">
+                <svg
+                  class="star-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+                <span>4.7</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 5 -->
+        <article class="product-card" data-category="textiles">
+          <div class="product-card__media">
+            <button
+              class="product-card__wishlist"
+              onclick="toggleWishlist(this, 'Плед из льна «Dune»')"
+              aria-label="Добавить в избранное"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </button>
+            <img
+              class="product-card__img"
+              src="./image/5.webp"
+              alt="Текстильный плед"
+              loading="lazy"
+            />
+            <button
+              class="product-card__btn-add"
+              onclick="addToCart('Плед из льна «Dune»')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              В корзину
+            </button>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__top-meta">
+              <span class="product-card__category">Текстиль</span>
+              <div class="product-card__swatches">
+                <span class="swatch" style="background-color: #e3dec3"></span>
+                <span class="swatch" style="background-color: #9e9484"></span>
+              </div>
+            </div>
+            <h2 class="product-card__title">Плед из льна «Dune»</h2>
+            <div class="product-card__footer">
+              <span class="product-card__price">9 800 ₽</span>
+              <div class="product-card__rating">
+                <svg
+                  class="star-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+                <span>4.9</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 6 -->
+        <article class="product-card" data-category="ceramics">
+          <div class="product-card__media">
+            <span class="product-card__badge">New</span>
+            <button
+              class="product-card__wishlist"
+              onclick="toggleWishlist(this, 'Набор чашек «Terra»')"
+              aria-label="Добавить в избранное"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </button>
+            <img
+              class="product-card__img"
+              src="./image/6.webp"
+              alt="Чашка ручной работы"
+              loading="lazy"
+            />
+            <button
+              class="product-card__btn-add"
+              onclick="addToCart('Набор чашек «Terra»')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              В корзину
+            </button>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__top-meta">
+              <span class="product-card__category">Керамика</span>
+              <div class="product-card__swatches">
+                <span class="swatch" style="background-color: #a37258"></span>
+                <span class="swatch" style="background-color: #2b2b2b"></span>
+              </div>
+            </div>
+            <h2 class="product-card__title">Набор чашек «Terra»</h2>
+            <div class="product-card__footer">
+              <span class="product-card__price">4 100 ₽</span>
+              <div class="product-card__rating">
+                <svg
+                  class="star-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+                <span>4.9</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Подвал каталога -->
+      <footer class="catalog-footer">
+        <div class="progress-bar">
+          <div class="progress-bar__fill"></div>
+        </div>
+        <button
+          class="btn-load-more"
+          onclick="showToast('Загрузка новых предметов...')"
+        >
+          Загрузить еще
+        </button>
+      </footer>
+    </main>
+
+    <!-- Уведомление (Toast) -->
+    <div id="toast" class="toast">
+      <div class="toast__icon">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <span id="toast-text">Товар добавлен в корзину</span>
+    </div>
+
+    <!-- Подключение JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
