@@ -34,9 +34,7 @@
             Все предметы
           </button>
           <button class="filter-tab" data-category="ceramics">Керамика</button>
-          <button class="filter-tab" data-category="scents">Ароматы</button>
-          <button class="filter-tab" data-category="lighting">Освещение</button>
-          <button class="filter-tab" data-category="wood">Дерево</button>
+          <button class="filter-tab" data-category="decor">Декор и картины</button>
           <button class="filter-tab" data-category="textiles">Текстиль</button>
         </nav>
 
@@ -95,13 +93,14 @@
 
       <!-- Сетка товаров -->
       <div class="products-grid" id="products-grid">
-        <!-- Карточка 1 -->
+
+        <!-- Карточка 1: Керамика (1.webp) -->
         <article class="product-card" data-category="ceramics">
           <div class="product-card__media">
             <span class="product-card__badge">New</span>
             <button
               class="product-card__wishlist"
-              onclick="toggleWishlist(this, 'Ваза «Solitude»')"
+              onclick="toggleWishlist(this, 'Пиала «Solitude»')"
               aria-label="Добавить в избранное"
             >
               <svg
@@ -120,12 +119,12 @@
             <img
               class="product-card__img"
               src="./image/1.webp"
-              alt="Ваза из белой глины"
+              alt="Керамическая пиала Solitude"
               loading="lazy"
             />
             <button
               class="product-card__btn-add"
-              onclick="addToCart('Ваза «Solitude»')"
+              onclick="addToCart('Пиала «Solitude»')"
             >
               <svg
                 width="16"
@@ -152,7 +151,7 @@
                 <span class="swatch" style="background-color: #d1c7b7"></span>
               </div>
             </div>
-            <h2 class="product-card__title">Ваза «Solitude»</h2>
+            <h2 class="product-card__title">Пиала «Solitude»</h2>
             <div class="product-card__footer">
               <span class="product-card__price">8 500 ₽</span>
               <div class="product-card__rating">
@@ -172,12 +171,12 @@
           </div>
         </article>
 
-        <!-- Карточка 2 -->
-        <article class="product-card" data-category="scents">
+        <!-- Карточка 2: Керамика (2.webp) -->
+        <article class="product-card" data-category="ceramics">
           <div class="product-card__media">
             <button
               class="product-card__wishlist"
-              onclick="toggleWishlist(this, 'Свеча «Sandalwood & Cedar»')"
+              onclick="toggleWishlist(this, 'Тарелки «Grain»')"
               aria-label="Добавить в избранное"
             >
               <svg
@@ -196,12 +195,12 @@
             <img
               class="product-card__img"
               src="./image/2.webp"
-              alt="Ароматическая свеча"
+              alt="Керамические тарелки Grain"
               loading="lazy"
             />
             <button
               class="product-card__btn-add"
-              onclick="addToCart('Свеча «Sandalwood & Cedar»')"
+              onclick="addToCart('Тарелки «Grain»')"
             >
               <svg
                 width="16"
@@ -222,12 +221,12 @@
           </div>
           <div class="product-card__info">
             <div class="product-card__top-meta">
-              <span class="product-card__category">Ароматы</span>
+              <span class="product-card__category">Керамика</span>
               <div class="product-card__swatches">
                 <span class="swatch" style="background-color: #3e2723"></span>
               </div>
             </div>
-            <h2 class="product-card__title">Свеча «Sandalwood & Cedar»</h2>
+            <h2 class="product-card__title">Тарелки «Grain»</h2>
             <div class="product-card__footer">
               <span class="product-card__price">3 200 ₽</span>
               <div class="product-card__rating">
@@ -247,15 +246,15 @@
           </div>
         </article>
 
-        <!-- Карточка 3 -->
-        <article class="product-card" data-category="lighting">
+        <!-- Карточка 3: Декор и картины (3.webp) -->
+        <article class="product-card" data-category="decor">
           <div class="product-card__media">
             <span class="product-card__badge product-card__badge--dark"
               >Bestseller</span
             >
             <button
               class="product-card__wishlist"
-              onclick="toggleWishlist(this, 'Светильник «Eclipse»')"
+              onclick="toggleWishlist(this, 'Картины «Eclipse»')"
               aria-label="Добавить в избранное"
             >
               <svg
@@ -274,12 +273,12 @@
             <img
               class="product-card__img"
               src="./image/3.webp"
-              alt="Настенный светильник"
+              alt="Настенные картины Eclipse"
               loading="lazy"
             />
             <button
               class="product-card__btn-add"
-              onclick="addToCart('Светильник «Eclipse»')"
+              onclick="addToCart('Картины «Eclipse»')"
             >
               <svg
                 width="16"
@@ -300,13 +299,13 @@
           </div>
           <div class="product-card__info">
             <div class="product-card__top-meta">
-              <span class="product-card__category">Освещение</span>
+              <span class="product-card__category">Декор</span>
               <div class="product-card__swatches">
                 <span class="swatch" style="background-color: #27272a"></span>
                 <span class="swatch" style="background-color: #d4af37"></span>
               </div>
             </div>
-            <h2 class="product-card__title">Светильник «Eclipse»</h2>
+            <h2 class="product-card__title">Картины «Eclipse»</h2>
             <div class="product-card__footer">
               <span class="product-card__price">14 900 ₽</span>
               <div class="product-card__rating">
@@ -326,12 +325,12 @@
           </div>
         </article>
 
-        <!-- Карточка 4 -->
-        <article class="product-card" data-category="wood">
+        <!-- Карточка 4: Керамика (4.webp) -->
+        <article class="product-card" data-category="ceramics">
           <div class="product-card__media">
             <button
               class="product-card__wishlist"
-              onclick="toggleWishlist(this, 'Поднос из дуба «Grain»')"
+              onclick="toggleWishlist(this, 'Ваза «Terra»')"
               aria-label="Добавить в избранное"
             >
               <svg
@@ -350,12 +349,12 @@
             <img
               class="product-card__img"
               src="./image/4.webp"
-              alt="Деревянный поднос"
+              alt="Керамическая ваза Terra"
               loading="lazy"
             />
             <button
               class="product-card__btn-add"
-              onclick="addToCart('Поднос из дуба «Grain»')"
+              onclick="addToCart('Ваза «Terra»')"
             >
               <svg
                 width="16"
@@ -376,13 +375,13 @@
           </div>
           <div class="product-card__info">
             <div class="product-card__top-meta">
-              <span class="product-card__category">Дерево</span>
+              <span class="product-card__category">Керамика</span>
               <div class="product-card__swatches">
                 <span class="swatch" style="background-color: #8d5b4c"></span>
                 <span class="swatch" style="background-color: #3b2319"></span>
               </div>
             </div>
-            <h2 class="product-card__title">Поднос из дуба «Grain»</h2>
+            <h2 class="product-card__title">Ваза «Terra»</h2>
             <div class="product-card__footer">
               <span class="product-card__price">5 400 ₽</span>
               <div class="product-card__rating">
@@ -402,12 +401,12 @@
           </div>
         </article>
 
-        <!-- Карточка 5 -->
+        <!-- Карточка 5: Текстиль (5.webp) -->
         <article class="product-card" data-category="textiles">
           <div class="product-card__media">
             <button
               class="product-card__wishlist"
-              onclick="toggleWishlist(this, 'Плед из льна «Dune»')"
+              onclick="toggleWishlist(this, 'Сумка «Dune»')"
               aria-label="Добавить в избранное"
             >
               <svg
@@ -426,12 +425,12 @@
             <img
               class="product-card__img"
               src="./image/5.webp"
-              alt="Текстильный плед"
+              alt="Текстильная сумка Dune"
               loading="lazy"
             />
             <button
               class="product-card__btn-add"
-              onclick="addToCart('Плед из льна «Dune»')"
+              onclick="addToCart('Сумка «Dune»')"
             >
               <svg
                 width="16"
@@ -458,7 +457,7 @@
                 <span class="swatch" style="background-color: #9e9484"></span>
               </div>
             </div>
-            <h2 class="product-card__title">Плед из льна «Dune»</h2>
+            <h2 class="product-card__title">Сумка «Dune»</h2>
             <div class="product-card__footer">
               <span class="product-card__price">9 800 ₽</span>
               <div class="product-card__rating">
@@ -478,13 +477,13 @@
           </div>
         </article>
 
-        <!-- Карточка 6 -->
-        <article class="product-card" data-category="ceramics">
+        <!-- Карточка 6: Текстиль (6.webp) -->
+        <article class="product-card" data-category="textiles">
           <div class="product-card__media">
             <span class="product-card__badge">New</span>
             <button
               class="product-card__wishlist"
-              onclick="toggleWishlist(this, 'Набор чашек «Terra»')"
+              onclick="toggleWishlist(this, 'Набор рубашек «Terra»')"
               aria-label="Добавить в избранное"
             >
               <svg
@@ -503,12 +502,12 @@
             <img
               class="product-card__img"
               src="./image/6.webp"
-              alt="Чашка ручной работы"
+              alt="Набор рубашек Terra"
               loading="lazy"
             />
             <button
               class="product-card__btn-add"
-              onclick="addToCart('Набор чашек «Terra»')"
+              onclick="addToCart('Набор рубашек «Terra»')"
             >
               <svg
                 width="16"
@@ -529,13 +528,13 @@
           </div>
           <div class="product-card__info">
             <div class="product-card__top-meta">
-              <span class="product-card__category">Керамика</span>
+              <span class="product-card__category">Текстиль</span>
               <div class="product-card__swatches">
                 <span class="swatch" style="background-color: #a37258"></span>
                 <span class="swatch" style="background-color: #2b2b2b"></span>
               </div>
             </div>
-            <h2 class="product-card__title">Набор чашек «Terra»</h2>
+            <h2 class="product-card__title">Набор рубашек «Terra»</h2>
             <div class="product-card__footer">
               <span class="product-card__price">4 100 ₽</span>
               <div class="product-card__rating">
@@ -554,6 +553,7 @@
             </div>
           </div>
         </article>
+
       </div>
 
       <!-- Подвал каталога -->
@@ -563,7 +563,7 @@
         </div>
         <button
           class="btn-load-more"
-          onclick="showToast('Загрузка новых предметов...')"
+          onclick="showToast('Загрузка новых предметов...', 'cart')"
         >
           Загрузить еще
         </button>
